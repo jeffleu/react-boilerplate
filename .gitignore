@@ -1,4 +1,8 @@
 /node_modules
 /src/client/public
+<<<<<<< HEAD
 /src/server/npm-debug.log
 *.DS_STORE
+=======
+.DS_STORE
+>>>>>>> f24d6ce865b9a7df60d0de6ec621e898d098832e
