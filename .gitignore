@@ -1,8 +1,16 @@
-/node_modules
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Dist server
+/src/server-dist
+
+# Public folder
 /src/client/public
-<<<<<<< HEAD
-/src/server/npm-debug.log
-*.DS_STORE
-=======
-.DS_STORE
->>>>>>> f24d6ce865b9a7df60d0de6ec621e898d098832e
