@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -13,12 +14,9 @@ class App extends Component {
   }
 
   clickHandler() {
-    fetch('/getData')
-      .then(response => console.log({response}));
-
-    // fetch('https://jsonplaceholder.typicode.com/photos')
-    //   .then(response => response.json())
-    //   .then(data => console.log({data}));
+    axios.get('/getData')
+      .then(response => console.log({response}))
+      .catch(err => console.log({err}));
   }
 
   render() {
@@ -30,8 +28,8 @@ class App extends Component {
 
         <Router>
           <div>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
           </div>
         </Router>
 
