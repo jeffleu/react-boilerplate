@@ -12,10 +12,21 @@ class App extends Component {
     };
   }
 
+  clickHandler() {
+    fetch('/getData')
+      .then(response => console.log({response}));
+
+    // fetch('https://jsonplaceholder.typicode.com/photos')
+    //   .then(response => response.json())
+    //   .then(data => console.log({data}));
+  }
+
   render() {
     return (
       <div>
         <p>Hello, Reacts!</p>
+
+        <button onClick={this.clickHandler}>API call</button>
 
         <Router>
           <div>

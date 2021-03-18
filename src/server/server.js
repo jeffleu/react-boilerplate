@@ -18,4 +18,13 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'client/index.html'));
 });
 
+app.post("/getData", async (req, res) => {
+  // const url = 'https://jsonplaceholder.typicode.com/photos';
+  // const response = await fetch(url);
+
+  console.log('================== inside /getData route');
+  // res.status(200);
+  return res.send('test');
+});
+
 app.listen(port, () => { console.log(`server.js has been served on port: ${port}`); });
